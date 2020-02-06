@@ -13,7 +13,7 @@ module.exports = app => {
     });
 }
 
-
-client.getCities({q: 'san jose'})
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
+//
+// client.getCities({q: 'san jose'})
+//     .then(res => console.log(res))
+//     .catch(err => console.log(err));
