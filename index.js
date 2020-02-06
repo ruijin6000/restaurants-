@@ -1,14 +1,20 @@
 const express = require('express');
+const zomato = require('zomato-api');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
+require('./models/restaurant_likes');
+mongoose.connect(keys.mongoURI);
 
 const app = express();
 
 
-const zomato = require('zomato-api');
+
+
 const client = zomato({
-    userKey: '52bbeae11be3015ad67a79fd98086d52'
+    userKey: keys.userKey
 });
 
-client.getCities({q: 'vancouver'})
+client.getCities({q: 'san jose'})
     .then(res => console.log(res))
     .catch(err => console.log(err));
 
