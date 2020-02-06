@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa34527-f475-49eb-8406-583418e0d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/restaurant_likes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/setupProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/keys.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/keys.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/mainPage_Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/HomePageRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +69,21 @@
       <option name="presentableId" value="Default" />
       <updated>1580957562947</updated>
       <workItem from="1580957564939" duration="129000" />
-      <workItem from="1580957708924" duration="5622000" />
+      <workItem from="1580957708924" duration="14235000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="889" y="442" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580968741049">
+      <screen x="0" y="23" width="2560" height="1317" />
+    </state>
+    <state x="889" y="442" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1317@0.23.2560.1317" timestamp="1580968741049" />
+    <state x="1853" y="513" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581014041840">
+      <screen x="0" y="23" width="2560" height="1317" />
+    </state>
+    <state x="1853" y="513" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1317@0.23.2560.1317" timestamp="1581014041840" />
   </component>
 </project>

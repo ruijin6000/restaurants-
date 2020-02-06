@@ -1,5 +1,5 @@
 const mongoose  = require('mongoose');
-const { Schema } = mongoose; // const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
 const likes = new Schema ({
     name: String,
@@ -7,4 +7,4 @@ const likes = new Schema ({
 
 });
 
-mongoose.model('Restaurant Likes',likes);
+mongoose.model('Restaurant_Likes',likes);
