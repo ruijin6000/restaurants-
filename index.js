@@ -2,12 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const path = require('path');
+const bodyParser = require('body-parser');
 require('./models/restaurant_likes');
 
 mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+app.use(bodyParser.json());
 require('./routes/HomePageRoute')(app);
 require('./services/addLikes')(app);
 

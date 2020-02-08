@@ -7,6 +7,7 @@ class HomePage extends Component {
 
     componentDidMount() {
         this.props.fetchName();
+
     }
 
     render(){
@@ -15,8 +16,9 @@ class HomePage extends Component {
             <nav>
                 <div className="nav-wrapper">
                     <h2>  HomePage  </h2>
-                    {this.props.cities}
+                    {/*{this.props.cities}*/}
                     <a href="/api/test">Request Data Version 2</a>
+                    {/*<button onClick={this.props.handleToken({temp: 'aappss'})} > Post </button>*/}
                 </div>
             </nav>
         );
