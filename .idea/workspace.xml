@@ -5,11 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/compponents/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <workItem from="1580957564939" duration="129000" />
       <workItem from="1580957708924" duration="43552000" />
       <workItem from="1581163116820" duration="34106000" />
-      <workItem from="1581268223509" duration="3744000" />
+      <workItem from="1581268223509" duration="8128000" />
     </task>
     <servers />
   </component>

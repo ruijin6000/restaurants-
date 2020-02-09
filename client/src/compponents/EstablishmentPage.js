@@ -11,8 +11,11 @@ class EstablishmentPage extends Component {
             return (
                 <div className="item" key={est.establishment_id}>
                     <Link to="/restaurant" onClick={() => {
-                        // this.props.fetchEstablishments({city_id: city.city_id});
-                        // this.props.mySelect([city.city_id, null]);
+                        this.props.mySelect([this.props.selection[0], est.establishment_id]);
+                        this.props.searchRes({
+                            city_id: this.props.selection[0],
+                            establishment_id: est.establishment_id
+                        })
                     }}>
                         <strong> {est.establishment_name} </strong>
                     </Link>
@@ -20,6 +23,7 @@ class EstablishmentPage extends Component {
             );
         });
     }
+
 
     render() {
         console.log(this.props);
@@ -33,10 +37,9 @@ class EstablishmentPage extends Component {
                     </div>
                 </nav>
             );
-        } else if (this.props.selection !== null && this.props.establishments == null ){
+        } else if (this.props.selection !== null && this.props.establishments == null) {
             return 'Processing....';
-        }
-        else {
+        } else {
             return (<Redirect to={'/'}/>)
         }
     }

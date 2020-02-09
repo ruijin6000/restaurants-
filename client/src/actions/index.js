@@ -13,8 +13,8 @@ export const fetchEstablishments =(cityID) => async dispatch => {
 
 };
 
-export const searchRes =(id) => async dispatch => {
-     const res = await axios.post('/api/search', id);
+export const searchRes =(ids) => async dispatch => {
+     const res = await axios.post('/api/search', ids);
      dispatch({type: TYPE.FETCH__RESTAURANTS, payload: res.data})
 
 };

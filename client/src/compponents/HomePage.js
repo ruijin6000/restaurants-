@@ -68,7 +68,7 @@ function mapStateToProps(state) {
     console.log("state is " + state);
     return {
         cities: state.cities,
-        establishments: state.establishments
+        establishments: state.establishments,
     };
 }
 
