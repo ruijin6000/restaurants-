@@ -2,8 +2,9 @@ const mongoose  = require('mongoose');
 const { Schema } = mongoose;
 
 const likes = new Schema ({
-    name: String,
-    likes : String,
+    res_id : String,
+    res_name: String,
+    likes : Number,
 
 });
 
