@@ -6,8 +6,8 @@ import * as actions from '../actions';
 class HomePage extends Component {
 
     componentDidMount() {
-        this.props.fetchCities();
-        this.props.fetchStates({'id':10883});
+        this.props.fetchCities({'city_name':"san jose "});
+       // this.props.fetchEstablishments({'city_id':"10883"});
 
     }
 
@@ -29,8 +29,8 @@ class HomePage extends Component {
 
 function mapStateToProps(state) {
     console.log("state is "+ state);
-    return { currentData: state.currentData,
-             currentStates: state.states
+    return { cities: state.cities,
+             establishments: state.establishments
     };
 }
 

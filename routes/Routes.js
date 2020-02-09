@@ -10,16 +10,16 @@ const configData = {
     params: {}
 };
 
-
 module.exports = app => {
-    app.get('/api/cities', async (req, res) => {
+
+    /**  CITIES **/
+    app.post('/api/cities', async (req, res) => {
         configData.url = 'https://developers.zomato.com/api/v2.1/cities';
-        configData.params = {'q': 'san jose', 'count': '5'};
+        configData.params = {'q': req.body.city_name, 'count': 5};
         try {
             const data = await axios.request(configData);
             const copy = [];
             //const data = await likes.find({name:"Rest"});
-            console.log("CITIES");
             //console.log(data.data.location_suggestions);
             for (let i=0; i<data.data.location_suggestions.length;i++) {
                 const item = {
@@ -28,15 +28,18 @@ module.exports = app => {
                 };
                 copy.push(item);
             }
-            res.send(copy);
-        } catch (e) { console.log(e); }
+            res.status(200).send(copy);
+        } catch (e) {
+            res.status(404);
+            console.log(e); }
 
     });
 
-  /** Get Establishment **/
-    app.get('/api/establishments', async (req, res) => {
+
+  /**  Establishment **/
+    app.post('/api/establishments', async (req, res) => {
         configData.url = 'https://developers.zomato.com/api/v2.1/establishments';
-        configData.params = {'city_id': req.body.city_id, 'count': '10'};
+        configData.params = {'city_id': req.body.city_id};
         try {
             const data = await axios.request(configData);
             //const data = await likes.find({name: "test"});
@@ -48,14 +51,16 @@ module.exports = app => {
                 };
                 copy.push(item);
             }
-            console.log(copy);
-            res.send(copy);
+            res.status(200).send(copy);
         } catch (e) {
+            res.status(404);
             console.log(e);
         }
     });
 
-    app.get('/api/search', async (req, res) => {
+
+    /**  Search Restaurants **/
+    app.post('/api/search', async (req, res) => {
         configData.url = 'https://developers.zomato.com/api/v2.1/search';
         configData.params = {
             'entity_id': req.body.city_id,
@@ -76,14 +81,13 @@ module.exports = app => {
                     address: buffer[i].restaurant.location.address,
                     cuisines: buffer[i].restaurant.cuisines
                 };
-                copy.push(item);
+                copy.status(200).push(item);
             }
             res.send(copy);
         } catch (e) {
+            res.status(404);
             console.log(e);
         }
-
-
     });
 
 };

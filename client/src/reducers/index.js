@@ -2,24 +2,24 @@ import {combineReducers} from "redux";
 import * as TYPE from "../actions/types";
 
 export default combineReducers({
-    currentData: CurrrentData,
-    states: CurrentStates,
+    cities: Cities,
+    establishments: Establishments,
 
 });
 
 
-function CurrrentData(state = null, action) {
+function Cities(state = null, action) {
     switch (action.type) {
-        case TYPE.FETCH__DATA :
+        case TYPE.FETCH__CITY :
             return action.payload || false;
         default :
             return state;
     }
 };
 
-function CurrentStates(state = null, action) {
+function Establishments(state = null, action) {
     switch (action.type) {
-        case TYPE.FETCH__STATE :
+        case TYPE.FETCH__ESTABLISHMENTS :
             return action.payload || false;
         default :
             return state;
