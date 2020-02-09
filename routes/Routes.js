@@ -13,7 +13,6 @@ const configData = {
 module.exports = app => {
 
 
-
     /**  CITIES **/
     app.post('/api/cities', async (req, res) => {
 
@@ -28,22 +27,23 @@ module.exports = app => {
             const copy = [];
             //const data = await likes.find({name:"Rest"});
             //console.log(data.data.location_suggestions);
-            for (let i=0; i<data.data.location_suggestions.length;i++) {
+            for (let i = 0; i < data.data.location_suggestions.length; i++) {
                 const item = {
-                    city_id : data.data.location_suggestions[i].id,
-                    city_name : data.data.location_suggestions[i].name
+                    city_id: data.data.location_suggestions[i].id,
+                    city_name: data.data.location_suggestions[i].name
                 };
                 copy.push(item);
             }
             res.status(200).send(copy);
         } catch (e) {
             res.status(404);
-            console.log(e); }
+            console.log(e);
+        }
 
     });
 
 
-  /**  Establishment **/
+    /**  Establishment **/
     app.post('/api/establishments', async (req, res) => {
         if (req.body.city_id == undefined) {
             res.redirect('/');
@@ -55,10 +55,10 @@ module.exports = app => {
             const data = await axios.request(configData);
             //const data = await likes.find({name: "test"});
             const copy = [];
-            for (let i=0; i<data.data.establishments.length;i++) {
+            for (let i = 0; i < 10 && i < data.data.establishments.length; i++) {
                 const item = {
-                    establishment_id : data.data.establishments[i].establishment.id,
-                    establishment_name : data.data.establishments[i].establishment.name,
+                    establishment_id: data.data.establishments[i].establishment.id,
+                    establishment_name: data.data.establishments[i].establishment.name,
                 };
                 copy.push(item);
             }
@@ -89,10 +89,10 @@ module.exports = app => {
             const buffer = data.data.restaurants;
             console.log("SEARCH");
             const copy = [];
-            for (let i=0; i<buffer.length;i++) {
+            for (let i = 0; i < buffer.length; i++) {
                 const item = {
-                    res_id : buffer[i].restaurant.id,
-                    res_name : buffer[i].restaurant.name,
+                    res_id: buffer[i].restaurant.id,
+                    res_name: buffer[i].restaurant.name,
                     address: buffer[i].restaurant.location.address,
                     cuisines: buffer[i].restaurant.cuisines
                 };

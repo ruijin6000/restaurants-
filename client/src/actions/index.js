@@ -8,11 +8,17 @@ export const fetchCities = (cityName) => async dispatch => {
 };
 
 export const fetchEstablishments =(cityID) => async dispatch => {
-     console.log(cityID);
      const res = await axios.post('/api/establishments', cityID);
      dispatch({type: TYPE.FETCH__ESTABLISHMENTS, payload: res.data})
 
 };
+
+export const searchRes =(id) => async dispatch => {
+     const res = await axios.post('/api/search', id);
+     dispatch({type: TYPE.FETCH__RESTAURANTS, payload: res.data})
+
+};
+
 
 export const mySelect =(payload) => {
      return {
@@ -23,3 +29,17 @@ export const mySelect =(payload) => {
 };
 
 
+export const cleanCities = (payload) => {
+     return {
+          type: TYPE.CLEAN_CITY,
+          payload: payload,
+     };
+};
+
+
+export const cleanEst = (payload) => {
+     return {
+          type: TYPE.CLEAN_ESTABLISHMENTS,
+          payload: payload,
+     };
+};

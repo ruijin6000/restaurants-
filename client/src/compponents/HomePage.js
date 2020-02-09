@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 import TextField from '@material-ui/core/TextField';
-import {makeStyles} from '@material-ui/core/styles'
 import {Link} from "react-router-dom";
 
 
@@ -17,20 +16,18 @@ class HomePage extends Component {
     };
 
     componentDidMount() {
-        // this.props.fetchEstablishments({'city_id':"10883"});
-        // this.props.fetchCities({'city_name': "san jose"});
+        this.props.cleanCities();
+        this.props.cleanEst();
     }
 
-    renderCityList() {
-        return this.props.cities.map(city => {
-            return (
+      renderCityList() {
+       return this.props.cities.map( city => {
+             return (
                 <div className="item" key={city.city_id}>
-                    <Link to="/establish"
-                          onClick={() => {
-                              this.props.fetchEstablishments({city_id:city.city_id});
-                              this.props.mySelect(city.city_id);
-                          }}
-                    >
+                    <Link to="/establish" onClick={() => {
+                        this.props.fetchEstablishments({city_id: city.city_id});
+                        this.props.mySelect([city.city_id, null]);
+                    }}>
                         <strong> {city.city_name} </strong>
                     </Link>
                 </div>
@@ -42,6 +39,7 @@ class HomePage extends Component {
         return (<form onSubmit={this.onSubmit}>
             <div>
                 <h2> HomePage </h2>
+
                 <TextField
                     required id="standard-required"
                     placeholder="Enter a Name of City "
