@@ -12,10 +12,17 @@ const configData = {
 
 module.exports = app => {
 
+
+
     /**  CITIES **/
     app.post('/api/cities', async (req, res) => {
+
+        if (req.body.city_name == undefined) {
+            res.redirect('/');
+        }
+
         configData.url = 'https://developers.zomato.com/api/v2.1/cities';
-        configData.params = {'q': req.body.city_name, 'count': 5};
+        configData.params = {q: req.body.city_name, count: 5};
         try {
             const data = await axios.request(configData);
             const copy = [];
@@ -38,8 +45,12 @@ module.exports = app => {
 
   /**  Establishment **/
     app.post('/api/establishments', async (req, res) => {
+        if (req.body.city_id == undefined) {
+            res.redirect('/');
+        }
+
         configData.url = 'https://developers.zomato.com/api/v2.1/establishments';
-        configData.params = {'city_id': req.body.city_id};
+        configData.params = {city_id: req.body.city_id};
         try {
             const data = await axios.request(configData);
             //const data = await likes.find({name: "test"});
@@ -61,12 +72,16 @@ module.exports = app => {
 
     /**  Search Restaurants **/
     app.post('/api/search', async (req, res) => {
+        if (req.body.city_id == undefined || req.body.establishment_id == undefined) {
+            res.redirect('/');
+        }
+
         configData.url = 'https://developers.zomato.com/api/v2.1/search';
         configData.params = {
-            'entity_id': req.body.city_id,
-            'entity_type': 'city',
+            entity_id: req.body.city_id,
+            entity_type: 'city',
             establishment_type: req.body.establishment_id,
-            'count': 20
+            count: 20
         };
         try {
             const data = await axios.request(configData);
@@ -81,9 +96,9 @@ module.exports = app => {
                     address: buffer[i].restaurant.location.address,
                     cuisines: buffer[i].restaurant.cuisines
                 };
-                copy.status(200).push(item);
+                copy.push(item);
             }
-            res.send(copy);
+            res.status(200).send(copy);
         } catch (e) {
             res.status(404);
             console.log(e);

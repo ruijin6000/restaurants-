@@ -13,3 +13,13 @@ export const fetchEstablishments =(cityID) => async dispatch => {
      dispatch({type: TYPE.FETCH__ESTABLISHMENTS, payload: res.data})
 
 };
+
+export const mySelect =(payload) => {
+     return {
+          type: TYPE.MY_SELECT,
+          payload: payload,
+     };
+
+};
+
+

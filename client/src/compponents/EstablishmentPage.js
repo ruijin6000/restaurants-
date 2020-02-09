@@ -23,7 +23,11 @@ class EstablishmentPage extends Component {
 }
 
 function mapStateToProps(state) {
-    return { };
+    return {
+        cities: state.cities,
+        establishments: state.establishments,
+        selection: state.mySelect
+    };
 }
 
 export default connect(mapStateToProps, actions )(EstablishmentPage);
