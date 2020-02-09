@@ -10,7 +10,7 @@ mongoose.connect(keys.mongoURI);
 const app = express();
 
 app.use(bodyParser.json());
-require('./routes/Routes')(app);
+require('./routes/api')(app);
 require('./services/addLikes')(app);
 
 // app.use(express.static(path.join(__dirname, 'build')));

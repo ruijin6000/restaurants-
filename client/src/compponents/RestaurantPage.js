@@ -26,11 +26,12 @@ class RestaurantPage extends Component {
                         </ExpansionPanelSummary>
 
                         <ExpansionPanelDetails>
-                            <div style={{width: '90%'}}>
-                                <Typography style={{float: 'left'}}>
-                                    <strong>Address: </strong> {res.address}
+                            <div style={{width: '100%'}}>
+                                <div style={{float: 'left'}}>
+                                    <strong>Address:  </strong> {res.address}
+                                    <div></div>
                                     <strong>Cuisines: </strong> {res.cuisines}
-                                </Typography>
+                                </div>
 
                                     <Button style={{float: 'right'}}
                                             variant="outlined"

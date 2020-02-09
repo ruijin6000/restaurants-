@@ -11,22 +11,18 @@ const configData = {
 };
 
 module.exports = app => {
-
-
     /**  CITIES **/
-    app.post('/api/cities', async (req, res) => {
-
+    app.post('/routes/cities', async (req, res) => {
         if (req.body.city_name == undefined) {
-            res.redirect('/');
-        }
+            res.redirect('/');}
 
         configData.url = 'https://developers.zomato.com/api/v2.1/cities';
         configData.params = {q: req.body.city_name, count: 5};
+
         try {
             const data = await axios.request(configData);
             const copy = [];
             //const data = await likes.find({name:"Rest"});
-            //console.log(data.data.location_suggestions);
             for (let i = 0; i < data.data.location_suggestions.length; i++) {
                 const item = {
                     city_id: data.data.location_suggestions[i].id,
@@ -44,7 +40,7 @@ module.exports = app => {
 
 
     /**  Establishment **/
-    app.post('/api/establishments', async (req, res) => {
+    app.post('/routes/establishments', async (req, res) => {
         if (req.body.city_id == undefined) {
             res.redirect('/');
         }
@@ -71,7 +67,7 @@ module.exports = app => {
 
 
     /**  Search Restaurants **/
-    app.post('/api/search', async (req, res) => {
+    app.post('/routes/search', async (req, res) => {
         if (req.body.city_id == undefined || req.body.establishment_id == undefined) {
             res.redirect('/');
         }
@@ -87,7 +83,6 @@ module.exports = app => {
             const data = await axios.request(configData);
             //const data = await likes.find({name: "test"});
             const buffer = data.data.restaurants;
-            console.log("SEARCH");
             const copy = [];
             for (let i = 0; i < buffer.length; i++) {
                 const item = {
