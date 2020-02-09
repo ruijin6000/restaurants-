@@ -6,7 +6,8 @@ import * as actions from '../actions';
 class HomePage extends Component {
 
     componentDidMount() {
-        this.props.fetchName();
+        this.props.fetchCities();
+        this.props.fetchStates({'id':10883});
 
     }
 
@@ -16,9 +17,8 @@ class HomePage extends Component {
             <nav>
                 <div className="nav-wrapper">
                     <h2>  HomePage  </h2>
-                    {/*{this.props.cities}*/}
+                    {/*{this.props.currentData}*/}
                     <a href="/api/test">Request Data Version 2</a>
-                    {/*<button onClick={this.props.handleToken({temp: 'aappss'})} > Post </button>*/}
                 </div>
             </nav>
         );
@@ -29,7 +29,9 @@ class HomePage extends Component {
 
 function mapStateToProps(state) {
     console.log("state is "+ state);
-    return { cities: state.cities};
+    return { currentData: state.currentData,
+             currentStates: state.states
+    };
 }
 
 export default connect(mapStateToProps, actions )(HomePage);

@@ -1,14 +1,14 @@
 import axios from 'axios';
-import {FETCH__City__Name} from "./types";
+import * as TYPE from "./types";
 
 
-export const fetchName = () => async dispatch => {
-     const res = await axios.get('/api/cities')
-     dispatch({type: FETCH__City__Name, payload: res.data});
+export const fetchCities = () => async dispatch => {
+     const res = await axios.get('/api/cities');
+     dispatch({type: TYPE.FETCH__DATA, payload: res.data});
 };
 
-export const handleToken =(token) => async dispatch => {
-     const res = await axios.post('/api/test', token);
-     dispatch({type: FETCH__City__Name, payload: res.data})
+export const fetchStates =(cityID) => async dispatch => {
+     const res = await axios.get('/api/establishments', cityID);
+     dispatch({type: TYPE.FETCH__STATE, payload: res.data})
 
 };

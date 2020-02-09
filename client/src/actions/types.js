@@ -1,1 +1,2 @@
-export const FETCH__City__Name = 'fetch_city_names';
+export const FETCH__DATA = 'fetch_data';
+export const FETCH__STATE = 'fetch_state';
