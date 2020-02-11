@@ -15,6 +15,7 @@ class RestaurantPage extends Component {
     componentDidMount() {
     }
 
+
     renderList() {
         return this.props.restaurants.map(res => {
             return (
@@ -32,11 +33,11 @@ class RestaurantPage extends Component {
                                     <div></div>
                                     <strong>Cuisines: </strong> {res.cuisines}
                                 </div>
-
                                     <Button style={{float: 'right'}}
                                             variant="outlined"
                                             size="medium"
-                                            color="primary">
+                                            color="primary"
+                                            >
                                         Likes
                                     </Button>
 

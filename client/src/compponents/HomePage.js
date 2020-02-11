@@ -18,6 +18,7 @@ class HomePage extends Component {
     componentDidMount() {
         this.props.cleanCities();
         this.props.cleanEst();
+
     }
 
       renderCityList() {
@@ -36,17 +37,21 @@ class HomePage extends Component {
     }
 
     content() {
-        return (<form onSubmit={this.onSubmit}>
+        return (
+            <div>
+            <form onSubmit={this.onSubmit}>
             <div>
                 <h2> HomePage </h2>
-
                 <TextField
                     required id="standard-required"
                     placeholder="Enter a Name of City "
                     maxLength={"50"}
                     onChange={e => this.setState({cityName: e.target.value})}/>
             </div>
-        </form>);
+            </form>
+                <button onClick={ () => {this.props.test(); console.log("TEST")} }> BUTTON </button>
+            </div>);
+
     }
 
     render() {
