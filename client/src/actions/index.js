@@ -35,6 +35,7 @@ export const mySelect =(payload) => {
 
 };
 
+
 export const cleanCities = (payload) => {
      return {
           type: TYPE.CLEAN_CITY,

@@ -5,10 +5,9 @@ export default combineReducers({
     cities: Cities,
     establishments: Establishments,
     restaurants : RestaurantReducer,
-    mySelect: Selection
+    mySelect: Selection,
 
 });
-
 
 function Cities(state = null, action) {
     switch (action.type) {
@@ -52,3 +51,4 @@ function Selection(state = null, action) {
     }
 
 }
+

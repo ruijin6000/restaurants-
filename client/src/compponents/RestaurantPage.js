@@ -4,17 +4,16 @@ import * as actions from '../actions';
 import {Link, Redirect} from "react-router-dom";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import Typography from "@material-ui/core/Typography";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Button from '@material-ui/core/Button';
-
+import LikeButton from './LikeButton';
 
 class RestaurantPage extends Component {
+    state = {
+        c_id: "",
+    };
 
-    componentDidMount() {
-    }
-
+    componentDidMount() { }
 
     renderList() {
         return this.props.restaurants.map(res => {
@@ -23,23 +22,22 @@ class RestaurantPage extends Component {
 
                     <ExpansionPanel>
                         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-                                <strong>  {res.res_name} </strong>
+                            <strong>  {res.res_name} </strong>
                         </ExpansionPanelSummary>
 
                         <ExpansionPanelDetails>
                             <div style={{width: '100%'}}>
                                 <div style={{float: 'left'}}>
-                                    <strong>Address:  </strong> {res.address}
+                                    <strong>Address: </strong> {res.address}
                                     <div></div>
                                     <strong>Cuisines: </strong> {res.cuisines}
                                 </div>
-                                    <Button style={{float: 'right'}}
-                                            variant="outlined"
-                                            size="medium"
-                                            color="primary"
-                                            >
-                                        Likes
-                                    </Button>
+                                <LikeButton
+                                    dataModel={{
+                                        res_id: res.res_id, res_name: res.res_name,
+                                        res_add: res.address, res_cus: res.cuisines,
+                                    }}
+                                />
 
                             </div>
                         </ExpansionPanelDetails>
@@ -57,15 +55,13 @@ class RestaurantPage extends Component {
                 <nav>
                     <div className="nav-wrapper">
                         <h2> RestaurantPage </h2>
-                         {this.renderList()}
+                        {this.renderList()}
                     </div>
                 </nav>
             );
-        }
-        else if (this.props.selection !== null && this.props.restaurants == null ){
+        } else if (this.props.selection !== null && this.props.restaurants == null) {
             return "Processing...."
-        }
-        else {
+        } else {
             return (<Redirect to={'/'}/>)
         }
     }
