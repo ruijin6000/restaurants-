@@ -49,13 +49,10 @@ class HomePage extends Component {
                     onChange={e => this.setState({cityName: e.target.value})}/>
             </div>
             </form>
-                <button onClick={ () => {this.props.test(); console.log("TEST")} }> BUTTON </button>
             </div>);
-
     }
 
     render() {
-        console.log(this.props);
         if (this.state.flag !== "") {
             return (
                 <div className="nav-wrapper">
@@ -70,7 +67,6 @@ class HomePage extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log("state is " + state);
     return {
         cities: state.cities,
         establishments: state.establishments,

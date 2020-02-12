@@ -24,7 +24,7 @@ function RestaurantReducer(state = null, action) {
     switch (action.type) {
         case TYPE.FETCH__RESTAURANTS:
             return action.payload || false;
-        case TYPE.CLEAN_ESTABLISHMENTS :
+        case TYPE.CLEAN_RESTAURANTS :
             return null;
         default :
             return state;

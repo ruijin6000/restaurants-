@@ -49,3 +49,11 @@ export const cleanEst = (payload) => {
           payload: payload,
      };
 };
+
+
+export const cleanRes = (payload) => {
+     return {
+          type: TYPE.CLEAN_RESTAURANTS,
+          payload: payload,
+     };
+};

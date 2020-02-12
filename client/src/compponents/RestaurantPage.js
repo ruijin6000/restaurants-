@@ -9,9 +9,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import LikeButton from './LikeButton';
 
 class RestaurantPage extends Component {
-    state = {
-        c_id: "",
-    };
+
 
     componentDidMount() { }
 

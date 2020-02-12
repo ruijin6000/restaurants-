@@ -9,6 +9,8 @@ class LikeButton extends Component {
 
     componentDidMount() {
         this.setState({dataModel: this.props.dataModel});
+        const flag = localStorage.getItem(this.props.dataModel.res_id);
+        this.setState({isLike:JSON.parse(flag)});
     }
 
     render() {
@@ -24,6 +26,7 @@ class LikeButton extends Component {
                                 let model = this.state.dataModel;
                                 model.res_likes = -1;
                                 this.props.addLikes(model);
+                                localStorage.setItem(this.state.dataModel.res_id,'false');
 
                             }}>
                         👍 Likes
@@ -38,6 +41,7 @@ class LikeButton extends Component {
                                 let model = this.state.dataModel;
                                 model.res_likes = 1;
                                 this.props.addLikes(model);
+                                localStorage.setItem(this.state.dataModel.res_id,'true');
                             }}>
                         Likes
                     </Button>

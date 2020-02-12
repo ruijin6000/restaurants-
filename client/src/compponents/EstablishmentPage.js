@@ -4,15 +4,19 @@ import * as actions from '../actions';
 import {Link, Redirect} from "react-router-dom";
 
 class EstablishmentPage extends Component {
-    state = {flag: null};
+
+
+    componentDidMount() {
+        this.props.cleanRes();
+    }
 
     renderList() {
         return this.props.establishments.map(est => {
             return (
                 <div className="item" key={est.establishment_id}>
-                    <Link to="/restaurant" onClick={() => {
+                    <Link to="/restaurant" onClick={async () => {
                         this.props.mySelect([this.props.selection[0], est.establishment_id]);
-                        this.props.searchRes({
+                        await this.props.searchRes({
                             city_id: this.props.selection[0],
                             establishment_id: est.establishment_id
                         })
@@ -49,7 +53,8 @@ function mapStateToProps(state) {
     return {
         cities: state.cities,
         establishments: state.establishments,
-        selection: state.mySelect
+        selection: state.mySelect,
+        restaurants: state.restaurants
     };
 }
 
