@@ -5,7 +5,6 @@ import {Link, Redirect} from "react-router-dom";
 
 class EstablishmentPage extends Component {
 
-
     componentDidMount() {
         this.props.cleanRes();
     }
@@ -23,6 +22,7 @@ class EstablishmentPage extends Component {
                     }}>
                         <strong> {est.establishment_name} </strong>
                     </Link>
+                    <br/><br/>
                 </div>
             );
         });
@@ -37,6 +37,7 @@ class EstablishmentPage extends Component {
                     <div className="nav-wrapper">
                         <h2> EstablishmentPage </h2>
                         <Link to="/">HomePage</Link>
+                        <br/><br/>
                         {this.renderList()}
                     </div>
                 </nav>
