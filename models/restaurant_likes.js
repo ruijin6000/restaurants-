@@ -4,7 +4,9 @@ const { Schema } = mongoose;
 const likes = new Schema ({
     res_id : String,
     res_name: String,
-    likes : Number,
+    res_add: String,
+    res_cus: String,
+    res_likes : Number,
 
 });
 

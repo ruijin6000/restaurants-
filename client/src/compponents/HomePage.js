@@ -1,37 +1,81 @@
-import React , {Component} from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import * as actions from '../actions';
+import TextField from '@material-ui/core/TextField';
+import {Link} from "react-router-dom";
 
 
 class HomePage extends Component {
 
+    state = {cityName: "", flag: ""};
+
+    onSubmit = async (e) => {
+        e.preventDefault();
+        await this.props.fetchCities({'city_name': this.state.cityName});
+        this.setState({flag: true});
+    };
+
     componentDidMount() {
-        this.props.fetchCities({'city_name':"san jose "});
-       // this.props.fetchEstablishments({'city_id':"10883"});
+        this.props.cleanCities();
+        this.props.cleanEst();
 
     }
 
-    render(){
-        console.log(this.props);
-        return (
-            <nav>
-                <div className="nav-wrapper">
-                    <h2>  HomePage  </h2>
-                    {/*{this.props.currentData}*/}
-                    <a href="/api/test">Request Data Version 2</a>
+      renderCityList() {
+       return this.props.cities.map( city => {
+             return (
+                <div className="item" key={city.city_id}>
+                    <Link to="/establish" onClick={() => {
+                        this.props.fetchEstablishments({city_id: city.city_id});
+                        this.props.mySelect([city.city_id, null]);
+                    }}>
+                        <strong> {city.city_name} </strong>
+                    </Link>
                 </div>
-            </nav>
-        );
+            );
+        });
+    }
+
+    content() {
+        return (
+            <div>
+            <form onSubmit={this.onSubmit}>
+            <div>
+                <h2> HomePage </h2>
+                <TextField
+                    required id="standard-required"
+                    placeholder="Enter a Name of City "
+                    maxLength={"50"}
+                    onChange={e => this.setState({cityName: e.target.value})}/>
+            </div>
+            </form>
+                <button onClick={ () => {this.props.test(); console.log("TEST")} }> BUTTON </button>
+            </div>);
 
     }
 
+    render() {
+        console.log(this.props);
+        if (this.state.flag !== "") {
+            return (
+                <div className="nav-wrapper">
+                    {this.content()}
+                    {this.renderCityList()}
+                </div>
+            );
+        } else {
+            return (<div>{this.content()}</div>)
+        }
+    }
 }
 
 function mapStateToProps(state) {
-    console.log("state is "+ state);
-    return { cities: state.cities,
-             establishments: state.establishments
+    console.log("state is " + state);
+    return {
+        cities: state.cities,
+        establishments: state.establishments,
     };
 }
 
-export default connect(mapStateToProps, actions )(HomePage);
+
+export default connect(mapStateToProps, actions)(HomePage);
