@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const keys = require('./config/keys');
 const path = require('path');
 const bodyParser = require('body-parser');
+const keys = require('./config/keys');
 require('./models/restaurant_likes');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -37,7 +37,4 @@ require('./services/addLikes')(app);
 
 
 const PORT = process.env.PORT || 5000;
-
-
-
 app.listen(PORT);

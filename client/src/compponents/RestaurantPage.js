@@ -36,9 +36,7 @@ class RestaurantPage extends Component {
                                     dataModel={{
                                         res_id: res.res_id, res_name: res.res_name,
                                         res_add: res.address, res_cus: res.cuisines,
-                                    }}
-                                />
-
+                                    }}/>
                             </div>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>

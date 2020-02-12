@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const model = mongoose.model('Restaurant_Likes');
 
 module.exports = app => {
@@ -24,11 +23,3 @@ module.exports = app => {
         res.send("ok");
     });
 }
-
-
-// const likes = new Schema ({
-// //     res_id : String,
-// //     res_name: String,
-// //     likes : Number,
-// //
-// // });
