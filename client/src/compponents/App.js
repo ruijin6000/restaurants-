@@ -3,7 +3,6 @@ import {BrowserRouter, Route} from "react-router-dom";
 import HomePage from "./HomePage";
 import EstablishmentPage from "./EstablishmentPage";
 import RestaurantPage from "./RestaurantPage";
-import Button from "./LikeButton"
 
 
 class App extends Component {

@@ -32,7 +32,6 @@ export const mySelect =(payload) => {
           type: TYPE.MY_SELECT,
           payload: payload,
      };
-
 };
 
 

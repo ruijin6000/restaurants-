@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
-import {Link, Redirect} from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 
@@ -10,14 +9,26 @@ class LikeButton extends Component {
 
     componentDidMount() {
         this.setState({dataModel: this.props.dataModel});
-
     }
-
-
 
     render() {
         switch (this.state.isLike) {
-            case false:
+            case true:
+                return (
+                    <Button style={{float: 'right'}}
+                            variant="contained"
+                            size="medium"
+                            color="primary"
+                            onClick={() => {
+                                this.setState({isLike: false});
+                                let model = this.state.dataModel;
+                                model.res_likes = -1;
+                                this.props.addLikes(model);
+
+                            }}>
+                        👍 Likes
+                    </Button>)
+            default: {
                 return (
                     <Button style={{float: 'right'}}
                             variant="contained"
@@ -32,24 +43,7 @@ class LikeButton extends Component {
                     </Button>
 
                 );
-            case true:
-                return (
-                    <Button style={{float: 'right'}}
-                            variant="contained"
-                            size="medium"
-                            color="primary"
-                            onClick={() => {
-                                this.setState({isLike: false});
-                                let model = this.state.dataModel;
-                                console.log("unlike1"+ this.state.dataModel.res_id);
-                                model.res_likes = -1;
-                                this.props.addLikes(model);
-
-                            }}>
-                        👍 Likes
-                    </Button>
-
-                )
+            }
         }
 
     }
