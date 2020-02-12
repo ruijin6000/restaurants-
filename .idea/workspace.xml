@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa34527-f475-49eb-8406-583418e0d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/compponents/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/LikeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/LikeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +70,7 @@
       <workItem from="1581359327854" duration="3000" />
       <workItem from="1581366793587" duration="2565000" />
       <workItem from="1581393769063" duration="30897000" />
-      <workItem from="1581514801013" duration="3020000" />
+      <workItem from="1581514801013" duration="5054000" />
     </task>
     <servers />
   </component>
