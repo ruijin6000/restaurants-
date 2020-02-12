@@ -1,8 +1,5 @@
 const axios = require('axios');
 const keys = require('../config/keys');
-const mongoose = require('mongoose');
-const likes = mongoose.model('Restaurant_Likes');
-
 
 const configData = {
     method: 'get',
@@ -13,23 +10,18 @@ const configData = {
 
 module.exports = app => {
 
-    app.get('/api/test', (req, res) => {
-        //console.log(req.get('Cookie'));
-        console.log(req.cookies['connect.sid']);
-        res.send("test");
-    });
 
     /**  CITIES **/
     app.post('/api/cities', async (req, res) => {
-        if (req.body.city_name == undefined) {
-            res.redirect('/');}
+        if (req.body.city_name === undefined) {
+            res.redirect('/');
+        }
         req.session.existUser = true;
         configData.url = 'https://developers.zomato.com/api/v2.1/cities';
         configData.params = {q: req.body.city_name, count: 5};
         try {
             const data = await axios.request(configData);
             const copy = [];
-            //const data = await likes.find({name:"Rest"});
             for (let i = 0; i < data.data.location_suggestions.length; i++) {
                 const item = {
                     city_id: data.data.location_suggestions[i].id,
@@ -48,7 +40,7 @@ module.exports = app => {
 
     /**  Establishment **/
     app.post('/api/establishments', async (req, res) => {
-        if (req.body.city_id == undefined) {
+        if (req.body.city_id === undefined) {
             res.redirect('/');
         }
 
@@ -56,7 +48,6 @@ module.exports = app => {
         configData.params = {city_id: req.body.city_id};
         try {
             const data = await axios.request(configData);
-            //const data = await likes.find({name: "test"});
             const copy = [];
             for (let i = 0; i < 10 && i < data.data.establishments.length; i++) {
                 const item = {
@@ -75,7 +66,7 @@ module.exports = app => {
 
     /**  Search Restaurants **/
     app.post('/api/search', async (req, res) => {
-        if (req.body.city_id == undefined || req.body.establishment_id == undefined) {
+        if (req.body.city_id === undefined || req.body.establishment_id === undefined) {
             res.redirect('/');
         }
         configData.url = 'https://developers.zomato.com/api/v2.1/search';
@@ -87,7 +78,6 @@ module.exports = app => {
         };
         try {
             const data = await axios.request(configData);
-            //const data = await likes.find({name: "test"});
             const buffer = data.data.restaurants;
             const copy = [];
             for (let i = 0; i < buffer.length; i++) {

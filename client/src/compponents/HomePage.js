@@ -21,9 +21,9 @@ class HomePage extends Component {
 
     }
 
-      renderCityList() {
-       return this.props.cities.map( city => {
-             return (
+    renderCityList() {
+        return this.props.cities.map(city => {
+            return (
                 <div className="item" key={city.city_id}>
                     <Link to="/establish" onClick={() => {
                         this.props.fetchEstablishments({city_id: city.city_id});
@@ -31,6 +31,7 @@ class HomePage extends Component {
                     }}>
                         <strong> {city.city_name} </strong>
                     </Link>
+                    <br/><br/>
                 </div>
             );
         });
@@ -39,16 +40,17 @@ class HomePage extends Component {
     content() {
         return (
             <div>
-            <form onSubmit={this.onSubmit}>
-            <div>
-                <h2> HomePage </h2>
-                <TextField
-                    required id="standard-required"
-                    placeholder="Enter a Name of City "
-                    maxLength={"50"}
-                    onChange={e => this.setState({cityName: e.target.value})}/>
-            </div>
-            </form>
+                <form onSubmit={this.onSubmit}>
+                    <h2> HomePage </h2>
+                    <TextField
+                        required id="standard-required"
+                        placeholder="Enter a Name of City "
+                        type = "text"
+                        maxLength={"20"}
+                        onChange={e => this.setState({cityName: e.target.value})}/>
+                    <button > Submit</button>
+                </form>
+                <br/>
             </div>);
     }
 

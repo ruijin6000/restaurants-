@@ -29,8 +29,9 @@ class LikeButton extends Component {
                                 localStorage.setItem(this.state.dataModel.res_id,'false');
 
                             }}>
-                        👍 Likes
-                    </Button>)
+                        <span role="img" aria-label="like">👍</span>
+                        Likes
+                    </Button>);
             default: {
                 return (
                     <Button style={{float: 'right'}}

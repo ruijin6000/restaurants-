@@ -38,6 +38,7 @@ class RestaurantPage extends Component {
                             </div>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
+                    <br/>
 
                 </div>
             );
