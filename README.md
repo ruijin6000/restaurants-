@@ -1,29 +1,29 @@
-##Description
+## Description
 The Project used Node.js and React for the stack. And used MongoDB as database on cloud.
 
 visit App online [https://restaurants1991.herokuapp.com/](https://restaurants1991.herokuapp.com/)
 
 ## Configuration :
 
-###1 : Install [Node.js](https://nodejs.org/en/) (npm) 
+### 1 : Install [Node.js](https://nodejs.org/en/) (npm) 
 
-###2 : Install node_modules on server-side (under Restaurant directory)
+### 2 : Install node_modules on server-side (under Restaurant directory)
 npm install
 
 ### 3: Install node_modules on client side  (run under client directory)
 npm install    
 
 
-## Development Mode  [http://localhost:3000](http://localhost:3000)
+## Development Mode  ### [http://localhost:3000](http://localhost:3000)
 ### To test development mode on local  (under Restaurant directory)
 npm run dev       
 
 
 
-## Production Mode   [http://localhost:5000](http://localhost:5000)
-### Step #1 build the client side  (under client directory) 
+## Production Mode   ### [http://localhost:5000](http://localhost:5000)
+### Step 1 build the client side  (under client directory) 
 npm run build
-### Step #2 run server (under Restaurant directory)
+### Step 2 run server (under Restaurant directory)
 npm run server 
 
 
