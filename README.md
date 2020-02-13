@@ -14,7 +14,7 @@ npm install
 npm install    
 
 
-## Development Mode  ([http://localhost:3000](http://localhost:3000)
+## Development Mode  ([http://localhost:3000](http://localhost:3000))
 ### To test development mode on local  (under Restaurant directory)
 npm run dev       
 
