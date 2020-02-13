@@ -19,7 +19,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
 
-## Deployed Mode ##  (**localhost:5000**)
+## Deployed Mode ##  
 ## Step #1 build the client side  (under client directory)
 npm run build
 ## Step #2 run server (under Restaurant directory)
