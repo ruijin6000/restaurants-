@@ -59,3 +59,4 @@ npm run server
 ## *Show DB DATA*
 #### http://127.0.0.1:3000/api/db (GET) (dev mode)
 #### http://127.0.0.1:5000/api/db (GET) (pro mode)
+#### https://restaurants1991.herokuapp.com/api/db  
