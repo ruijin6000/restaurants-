@@ -14,25 +14,18 @@ npm install
 npm install    
 
 
-## Development Mode  ### [http://localhost:3000](http://localhost:3000)
+## Development Mode  ([http://localhost:3000](http://localhost:3000)
 ### To test development mode on local  (under Restaurant directory)
 npm run dev       
 
 
 
-## Production Mode   ### [http://localhost:5000](http://localhost:5000)
+## Production Mode   ([http://localhost:5000](http://localhost:5000))
 ### Step 1 build the client side  (under client directory) 
 npm run build
 ### Step 2 run server (under Restaurant directory)
 npm run server 
 
-
-### Show DB content 
-[http://localhost:3000/api/db](http://localhost:3000/api/db)  (dev mode)
-
-[http://localhost:5000/api/db](http://localhost:5000/api/db)  (pro mode)
-
-[https://restaurants1991.herokuapp.com/api/db](https://restaurants1991.herokuapp.com/api/db)
 
 ## API
 
