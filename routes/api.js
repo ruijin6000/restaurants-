@@ -14,7 +14,7 @@ module.exports = app => {
     /**  CITIES **/
     app.post('/api/cities', async (req, res) => {
         if (req.body.city_name === undefined) {
-            res.redirect('/');
+            return res.status(404).send("Cities Not Found");
         }
         req.session.existUser = true;
         configData.url = 'https://developers.zomato.com/api/v2.1/cities';
@@ -41,7 +41,7 @@ module.exports = app => {
     /**  Establishment **/
     app.post('/api/establishments', async (req, res) => {
         if (req.body.city_id === undefined) {
-            res.redirect('/');
+            return res.status(404).send("Establishments Not Found");
         }
 
         configData.url = 'https://developers.zomato.com/api/v2.1/establishments';
@@ -67,7 +67,7 @@ module.exports = app => {
     /**  Search Restaurants **/
     app.post('/api/search', async (req, res) => {
         if (req.body.city_id === undefined || req.body.establishment_id === undefined) {
-            res.redirect('/');
+            return res.status(404).send("Restaurants Not Found");
         }
         configData.url = 'https://developers.zomato.com/api/v2.1/search';
         configData.params = {
