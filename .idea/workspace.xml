@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa34527-f475-49eb-8406-583418e0d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/compponents/ViewDB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/LikeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/LikeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/addLikes.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/addLikes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +69,9 @@
       <workItem from="1581359327854" duration="3000" />
       <workItem from="1581366793587" duration="2565000" />
       <workItem from="1581393769063" duration="30897000" />
-      <workItem from="1581514801013" duration="7092000" />
+      <workItem from="1581514801013" duration="8093000" />
+      <workItem from="1581566012239" duration="2421000" />
+      <workItem from="1581609896711" duration="1048000" />
     </task>
     <servers />
   </component>

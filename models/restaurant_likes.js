@@ -1,7 +1,12 @@
 const mongoose  = require('mongoose');
 const { Schema } = mongoose;
 
-const likes = new Schema ({
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+
+const likesSchema = new Schema ({
     res_id : String,
     res_name: String,
     res_add: String,
@@ -10,4 +15,4 @@ const likes = new Schema ({
 
 });
 
-mongoose.model('Restaurant_Likes',likes);
+mongoose.model('Restaurant_Likes',likesSchema);
