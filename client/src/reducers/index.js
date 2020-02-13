@@ -4,8 +4,8 @@ import * as TYPE from "../actions/types";
 export default combineReducers({
     cities: Cities,
     establishments: Establishments,
-    restaurants : RestaurantReducer,
-    mySelect: Selection,
+    restaurants: RestaurantReducer,
+    mySelect: SelectionReducer,
 
 });
 
@@ -42,7 +42,7 @@ function Establishments(state = null, action) {
     }
 };
 
-function Selection(state = null, action) {
+function SelectionReducer(state = null, action) {
     switch (action.type) {
         case TYPE.MY_SELECT:
             return action.payload;

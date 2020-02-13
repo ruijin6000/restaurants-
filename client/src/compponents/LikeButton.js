@@ -7,10 +7,11 @@ import Button from "@material-ui/core/Button";
 class LikeButton extends Component {
     state = {isLike: false, dataModel:"default"};
 
-    componentDidMount() {
+   async componentDidMount() {
         this.setState({dataModel: this.props.dataModel});
         const flag = localStorage.getItem(this.props.dataModel.res_id);
         this.setState({isLike:JSON.parse(flag)});
+
     }
 
     render() {

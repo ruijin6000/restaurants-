@@ -30,14 +30,13 @@ class EstablishmentPage extends Component {
 
 
     render() {
-        console.log(this.props);
         if (this.props.selection !== null && this.props.establishments !== null) {
             return (
                 <nav>
                     <div className="nav-wrapper">
+                        <Link to="/">Home</Link>
                         <h2> EstablishmentPage </h2>
-                        <Link to="/">HomePage</Link>
-                        <br/><br/>
+                        <br/>
                         {this.renderList()}
                     </div>
                 </nav>

@@ -10,9 +10,6 @@ import LikeButton from './LikeButton';
 
 class RestaurantPage extends Component {
 
-
-    componentDidMount() { }
-
     renderList() {
         return this.props.restaurants.map(res => {
             return (
@@ -46,11 +43,11 @@ class RestaurantPage extends Component {
     }
 
     render() {
-        console.log(this.props);
         if (this.props.selection !== null && this.props.restaurants !== null) {
             return (
                 <nav>
                     <div className="nav-wrapper">
+                        <Link to="/">Home</Link>
                         <h2> RestaurantPage </h2>
                         {this.renderList()}
                     </div>
