@@ -1,5 +1,6 @@
 **Description**
 The Project used Node.js and React for the stack. And used MongoDB as database on cloud.
+visit App online [https://restaurants1991.herokuapp.com/](https://restaurants1991.herokuapp.com/)
 
 ## Configuration :
 
@@ -25,4 +26,40 @@ npm run build
 npm run server
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser
 
+## Show DB content 
+[http://localhost:3000/api/db](http://localhost:3000/api/db) or
+[http://localhost:5000/api/db](http://localhost:5000/api/db) or
+[https://restaurants1991.herokuapp.com/api/db](https://restaurants1991.herokuapp.com/api/db)
 
+## API
+
+## *Search Cities*
+#### http://127.0.0.1:3000/api/cities (POST) (dev mode)
+#### http://127.0.0.1:5000/api/cities (POST) (pro mode)
+##### Request Body:
+	{
+		"city_name": <string>	
+	}
+
+
+## *Search Establishments*
+#### http://127.0.0.1:3000/api/search (POST) (dev mode)
+#### http://127.0.0.1:5000/api/search (POST) (pro mode)
+##### Request Body:
+    {
+        "city_id": <string>		
+    }
+    
+    
+## *Search Restaurants*
+#### http://127.0.0.1:3000/api/search (POST) (dev mode)
+#### http://127.0.0.1:5000/api/search (POST) (pro mode)
+##### Request Body:
+    {
+        "city_id": <string>		
+        "establishment_id" : <string>
+    }
+    
+## *Show DB DATA*
+#### http://127.0.0.1:3000/api/db (GET) (dev mode)
+#### http://127.0.0.1:5000/api/db (GET) (pro mode)
