@@ -60,13 +60,14 @@ npm run server
 #### http://127.0.0.1:3000/api/addLikes (POST) (dev mode)
 #### http://127.0.0.1:5000/api/addLikes (POST) (pro mode)
 ##### Request Body:
-  {
-    "res_id":    <string>
-    "res_name":  <string>
-    "res_add":   <string>
-    "res_cus":   <string>
-    "res_likes": <number>
-   }   
+
+    {
+    "city_id" :   <string>
+    "res_name" :  <string>
+    "res_add" :   <string>
+    "res_cus" :   <string>
+    }   
+	
 ## *Show DB DATA*
 #### http://127.0.0.1:3000/api/db (GET) (dev mode)
 #### http://127.0.0.1:5000/api/db (GET) (pro mode)
