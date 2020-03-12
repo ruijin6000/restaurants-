@@ -6,6 +6,7 @@ import {Link, Redirect} from "react-router-dom";
 class EstablishmentPage extends Component {
 
     componentDidMount() {
+        console.log(this.props);
         this.props.cleanRes();
     }
 

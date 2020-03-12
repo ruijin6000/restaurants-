@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa34527-f475-49eb-8406-583418e0d83f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/compponents/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +35,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -81,7 +85,11 @@
       <workItem from="1581611068763" duration="6883000" />
       <workItem from="1581623351040" duration="652000" />
       <workItem from="1582112068480" duration="2074000" />
-      <workItem from="1582218708201" duration="2460000" />
+      <workItem from="1582218708201" duration="3724000" />
+      <workItem from="1582224201789" duration="5429000" />
+      <workItem from="1582916972741" duration="6000" />
+      <workItem from="1583706467037" duration="228000" />
+      <workItem from="1583828046637" duration="108000" />
     </task>
     <servers />
   </component>
@@ -101,25 +109,25 @@
       <screen x="0" y="23" width="2560" height="1317" />
     </state>
     <state x="861" y="422" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2560.1317@0.23.2560.1317" timestamp="1581622040349" />
-    <state width="1805" height="360" key="GridCell.Tab.0.bottom" timestamp="1581480285154">
-      <screen x="0" y="23" width="2560" height="1323" />
+    <state width="1817" height="308" key="GridCell.Tab.0.bottom" timestamp="1582223215599">
+      <screen x="0" y="23" width="2560" height="1317" />
     </state>
-    <state width="1805" height="360" key="GridCell.Tab.0.bottom/0.23.2560.1317@0.23.2560.1317" timestamp="1581394225755" />
+    <state width="1817" height="308" key="GridCell.Tab.0.bottom/0.23.2560.1317@0.23.2560.1317" timestamp="1582223215599" />
     <state width="1805" height="360" key="GridCell.Tab.0.bottom/0.23.2560.1323@0.23.2560.1323" timestamp="1581480285154" />
-    <state width="1805" height="360" key="GridCell.Tab.0.center" timestamp="1581480285154">
-      <screen x="0" y="23" width="2560" height="1323" />
+    <state width="1817" height="308" key="GridCell.Tab.0.center" timestamp="1582223215599">
+      <screen x="0" y="23" width="2560" height="1317" />
     </state>
-    <state width="1805" height="360" key="GridCell.Tab.0.center/0.23.2560.1317@0.23.2560.1317" timestamp="1581394225754" />
+    <state width="1817" height="308" key="GridCell.Tab.0.center/0.23.2560.1317@0.23.2560.1317" timestamp="1582223215599" />
     <state width="1805" height="360" key="GridCell.Tab.0.center/0.23.2560.1323@0.23.2560.1323" timestamp="1581480285154" />
-    <state width="1805" height="360" key="GridCell.Tab.0.left" timestamp="1581480285154">
-      <screen x="0" y="23" width="2560" height="1323" />
+    <state width="1817" height="308" key="GridCell.Tab.0.left" timestamp="1582223215599">
+      <screen x="0" y="23" width="2560" height="1317" />
     </state>
-    <state width="1805" height="360" key="GridCell.Tab.0.left/0.23.2560.1317@0.23.2560.1317" timestamp="1581394225754" />
+    <state width="1817" height="308" key="GridCell.Tab.0.left/0.23.2560.1317@0.23.2560.1317" timestamp="1582223215599" />
     <state width="1805" height="360" key="GridCell.Tab.0.left/0.23.2560.1323@0.23.2560.1323" timestamp="1581480285154" />
-    <state width="1805" height="360" key="GridCell.Tab.0.right" timestamp="1581480285154">
-      <screen x="0" y="23" width="2560" height="1323" />
+    <state width="1817" height="308" key="GridCell.Tab.0.right" timestamp="1582223215599">
+      <screen x="0" y="23" width="2560" height="1317" />
     </state>
-    <state width="1805" height="360" key="GridCell.Tab.0.right/0.23.2560.1317@0.23.2560.1317" timestamp="1581394225755" />
+    <state width="1817" height="308" key="GridCell.Tab.0.right/0.23.2560.1317@0.23.2560.1317" timestamp="1582223215599" />
     <state width="1805" height="360" key="GridCell.Tab.0.right/0.23.2560.1323@0.23.2560.1323" timestamp="1581480285154" />
     <state x="1359" y="499" width="667" height="476" key="find.popup" timestamp="1581054500070">
       <screen x="0" y="23" width="2560" height="1317" />
