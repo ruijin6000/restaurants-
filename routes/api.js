@@ -16,6 +16,7 @@ module.exports = app => {
         if (req.body.city_name === undefined) {
             return res.status(404).send("Cities Not Found");
         }
+
         req.session.existUser = true;
         configData.url = 'https://developers.zomato.com/api/v2.1/cities';
         configData.params = {q: req.body.city_name, count: 5};

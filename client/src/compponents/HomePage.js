@@ -12,6 +12,7 @@ class HomePage extends Component {
     onSubmit = async (e) => {
         e.preventDefault();
         await this.props.fetchCities({'city_name': this.state.cityName});
+        console.log(this.props);
         this.setState({flag: true});
     };
 

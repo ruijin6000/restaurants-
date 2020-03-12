@@ -43,6 +43,7 @@ class RestaurantPage extends Component {
     }
 
     render() {
+        console.log(this.props);
         if (this.props.selection !== null && this.props.restaurants !== null) {
             return (
                 <nav>
