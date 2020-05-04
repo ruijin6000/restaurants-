@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa34527-f475-49eb-8406-583418e0d83f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/models/mySql.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/EstablishmentPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/RestaurantPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/compponents/LikeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/compponents/LikeButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -49,18 +49,6 @@
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/client/public" />
     </key>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -90,11 +78,24 @@
       <workItem from="1582916972741" duration="6000" />
       <workItem from="1583706467037" duration="228000" />
       <workItem from="1583828046637" duration="108000" />
+      <workItem from="1584037890232" duration="2628000" />
+      <workItem from="1587689813815" duration="528000" />
+      <workItem from="1588048383313" duration="1356000" />
+      <workItem from="1588198853967" duration="113000" />
+      <workItem from="1588199430678" duration="7932000" />
+      <workItem from="1588254869261" duration="518000" />
+      <workItem from="1588284735934" duration="258000" />
+      <workItem from="1588284996424" duration="25000" />
+      <workItem from="1588285080277" duration="445000" />
+      <workItem from="1588286949736" duration="2387000" />
+      <workItem from="1588294690594" duration="1986000" />
+      <workItem from="1588619385282" duration="7000" />
+      <workItem from="1588619483816" duration="3686000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="889" y="442" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581394238765">
