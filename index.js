@@ -8,6 +8,16 @@ require('./models/user');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
+const db = require('./models/mySql');
+
+
+db.execute('SELECT * FROM products')
+    .then(result=>{
+        console.log(result[0],result[1])
+    })
+    .catch(err=>{
+        console.log(err);
+    });
 
 
 mongoose.connect(keys.mongoURI);
